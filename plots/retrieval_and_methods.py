@@ -17,7 +17,7 @@ plt.rcParams.update({
 })
 
 # Read CSV from external file
-df = pd.read_csv('models.csv')
+df = pd.read_csv('model_comparison.csv')
 
 # Adjust accuracy
 df['adjusted_accuracy'] = df['accuracy'] - 0.25
