@@ -1,4 +1,22 @@
-# prompt_attacks_paper
+# Prompt Attacks Reveal Superficial Knowledge Removal in Unlearning Methods
+
+This repository contains the code and data for our paper "Prompt Attacks Reveal Superficial Knowledge Removal in Unlearning Methods", accepted at the SoLaR (Society, Language, and Reasoning) workshop at COLM 2025.
+
+## Abstract
+In this work, we demonstrate that certain machine unlearning methods may fail
+under straightforward prompt attacks. We systematically evaluate eight unlearning
+techniques across three model families using output-based, logit-based, and probe
+analysis to assess the extent to which supposedly unlearned knowledge can be
+retrieved. While methods like RMU and TAR exhibit robust unlearning, ELM
+remains vulnerable to specific prompt attacks (e.g., prepending Hindi filler text
+to the original prompt recovers 57.3% accuracy). Our logit analysis further indi-
+cates that unlearned models are unlikely to hide knowledge through changes in
+answer formatting, given the strong correlation between output and logit accuracy.
+These findings challenge prevailing assumptions about unlearning effectiveness
+and highlight the need for evaluation frameworks that can reliably distinguish be-
+tween genuine knowledge removal and superficial output suppression. To facilitate
+further research, we publicly release our evaluation framework to easily evaluate
+prompting techniques to retrieve unlearned knowledge.
 
 ## Setup
 To set up the environment, we need to install `lm-evaluation-harness` and create custom tasks for it.
