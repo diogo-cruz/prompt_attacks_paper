@@ -56,3 +56,12 @@ lm_eval --model hf \
 ```
 
 We provide example codes in `run.sh`. 
+
+### Probes
+
+To reproduce figures for the probes, you will need to do the following:
+
+1. Get access to the WMDP Bio forget corpus: [form to request access to the dataset](https://huggingface.co/datasets/cais/wmdp-bio-forget-corpus)
+2. In `probe/train_probes_on_unlearned_models.ipynb` update the filepath to the WMDP bio dataset that you want to probe with along with the model that you want to probe. (This should be on the third cell)
+3. Run the rest of the script and produce the output CSV file
+4. Run `plots/probe_visualization.py` on the CSV output to produce the graph.
